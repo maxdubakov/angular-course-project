@@ -11,6 +11,7 @@ export class RecipeService {
 
   private recipes: Recipe[] = [
     new Recipe(
+      1,
       'First',
       'Quite good one!',
       'https://realfood.tesco.com/media/images/RFO-October2020-65809-Tesco-LetsCook-Oct20-65850-SpicedChickenGreenBeans1400x919-38f3e9b0-7241-49a3-83fe-fcc38d2c24be-0-1400x919.jpg',
@@ -19,6 +20,7 @@ export class RecipeService {
         new Ingredient('French Fries', 20)
       ]),
     new Recipe(
+      2,
       'Second',
       'Quite good two!',
       'https://realfood.tesco.com/media/images/RFO-October2020-65809-Tesco-LetsCook-Oct20-65850-SpicedChickenGreenBeans1400x919-38f3e9b0-7241-49a3-83fe-fcc38d2c24be-0-1400x919.jpg',
@@ -37,6 +39,10 @@ export class RecipeService {
 
   addIngredientsToShoppingList(ings: Ingredient[]) {
     this.slService.addIngredients(ings);
+  }
+
+  getRecipe(id: number) {
+    return this.recipes[id];
   }
 
 }
