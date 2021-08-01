@@ -1,3 +1,7 @@
 .mgr-05 {
   margin-right: 0.5rem;
 }
+
+input.ng-invalid.ng-touched {
+  border: 1px solid darkred;
+}
